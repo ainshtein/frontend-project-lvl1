@@ -1,9 +1,10 @@
 # Name of workflow
-name: Node.js CI
+name: Node CI
 
+# Trigger the workflow on push or pull request
 on:
-  push:
-  pull_request:
+  - push:
+  - pull_request:
   
 jobs:
   build:
@@ -12,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-    # Node versions list
+      # Node versions list
       matrix:
         node-version: [14.x]
 
@@ -34,10 +35,6 @@ jobs:
       # Add environment variables
       env:
         CI: true
-    - name: show Dir
-      # Show working directory
-      run: |
-        ls
     - name: Run linter
       # Run Linter
       run: |
