@@ -35,9 +35,9 @@ jobs:
       env:
         CI: true
     - name: show Dir
-        # Show working directory
-        run: |
-          ls
+      # Show working directory
+      run: |
+        ls
     - name: Run linter
       # Run Linter
       run: |
