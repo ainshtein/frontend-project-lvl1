@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const greeting = () => {
+const greeting = () => {
   const name = readlineSync.question('May I have your name? ');
 
   if (name) {
@@ -9,3 +9,5 @@ export const greeting = () => {
     console.log('Hello, user');
   }
 };
+
+export default greeting;
