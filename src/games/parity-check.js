@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
+import getRandomInt from '../utils.js';
 
 const playParityCheck = () => {
   console.log('Welcome to the Brain Games!');
 
-  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
   const isEven = (number) => number % 2 === 0;
 
   const userName = readlineSync.question('May I have your name? ');
@@ -20,7 +20,7 @@ const playParityCheck = () => {
   console.log(gameDescription);
 
   for (roundsCounter; roundsCounter < totalRounds; roundsCounter += 1) {
-    const randomNumber = getRandomInt(1, 20);
+    const randomNumber = getRandomInt();
     const question = `Question: ${randomNumber}`;
     console.log(question);
 
