@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import playParityCheck from '../src/parity-check.js';
+import playParityCheck from '../src/games/parity-check.js';
 
 playParityCheck();
