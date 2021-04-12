@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import getRandomInt from "../utils.js";
-import playBrainGames from "../index.js";
+import getRandomInt from '../utils.js';
+import playBrainGames from '../index.js';
 
 const calcOperations = ['+', '-', '*'];
 
@@ -22,7 +22,7 @@ const calculateExpression = (a, b, operator) => {
 const getGameData = () => {
   const firstCalcValue = getRandomInt();
   const secondCalcValue = getRandomInt();
-  const calcOperation = calcOperations[getRandomInt(0, calcOperations.length -1)];
+  const calcOperation = calcOperations[getRandomInt(0, calcOperations.length - 1)];
   const gameQuestion = `${firstCalcValue} ${calcOperation} ${secondCalcValue}`;
   const rightAnswer = String(calculateExpression(firstCalcValue, secondCalcValue, calcOperation));
 

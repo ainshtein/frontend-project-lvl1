@@ -17,7 +17,7 @@ const playBrainGames = (gameDescription, getGameData) => {
 
   console.log(`${gameDescription}\n`);
 
-  for (let i = 0; i < roundsCount; i += 1 ) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const gameData = getGameData();
     const getGameQuestion = car(gameData);
     const getGameAnswer = cdr(gameData);
